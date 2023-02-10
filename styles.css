@@ -1,0 +1,98 @@
+ 
+ *{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  
+ }
+.wrapper{
+    height: 100vh;
+    /* in order to control the overflow of the image in the x direction */
+    overflow-x:hidden;  
+    /* we only want scrolling in the y direction so .... */
+    overflow-y: auto;
+    perspective: 10px;
+  
+}
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* for 3d effect use transform style */
+    transform-style: preserve-3d;
+    height: 100%;
+    z-index: -1;
+  }
+   
+  .background{
+    transform: translateZ(-40px) scale(5);
+  }
+  .foreground{
+    transform: translateZ(-20px) scale(3) ;
+  }
+  .background , .foreground {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+  }
+  
+  h1{
+    position: absolute;
+    top: 5rem;
+    font-size: 10rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0 , 1) ;
+    color: whitesmoke;
+  }
+  
+  section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem;
+  }
+
+  .section-heading{
+    font-size: 5rem;
+    padding: 0  10rem;
+
+  }
+
+  .text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0 ;
+  }
+
+  .bg{
+    position: relative;
+    width: 100%;
+    /* background attachment- the image will be fixed there itself and the things will be 
+    scrolling through it */
+    background-attachment: fixed;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .bg1{
+    background-image: url(sport-1.jpg);
+  }
+  .bg2 {
+      background-image: url(sport-2.jpg);
+  }
+  .bg3 {
+      background-image: url(sport-3.jpg);
+  }
+
+  .desc{
+    color: black;
+    position: absolute;
+    background-color: white ;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) ;
+    font-size: 3rem;
+    font-weight: 600;
+  }
